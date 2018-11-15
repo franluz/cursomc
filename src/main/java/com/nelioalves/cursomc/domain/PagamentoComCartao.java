@@ -1,10 +1,10 @@
 package com.nelioalves.cursomc.domain;
 
-import java.io.Serializable;
+import javax.persistence.Entity;
 
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
-
-public class PagamentoComCartao extends Pagamento implements Serializable {
+@Entity
+public class PagamentoComCartao extends Pagamento  {
 
 	/**
 	 * 
