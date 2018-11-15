@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED) 
-public  class Pagamento implements Serializable {
+public abstract  class Pagamento implements Serializable {
 
 	/**
 	 * 
