@@ -2,7 +2,9 @@ package com.nelioalves.cursomc.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,6 +35,7 @@ public class Produto implements Serializable{
 	)
 	@JsonBackReference
 	private List<Categoria> categorias = new ArrayList<Categoria>();
+	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
 	
 	public Produto() {
 		super();
