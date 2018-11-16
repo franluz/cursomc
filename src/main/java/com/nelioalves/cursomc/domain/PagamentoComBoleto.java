@@ -6,10 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonFormat;
-=======
->>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
 @Entity
 public class PagamentoComBoleto extends Pagamento  {
@@ -18,15 +15,10 @@ public class PagamentoComBoleto extends Pagamento  {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Temporal(TemporalType.DATE)
-<<<<<<< HEAD
 	@JsonFormat(pattern="dd/mm/yyy HH:mm")
 	private Date dataVencimento;
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(pattern="dd/mm/yyy HH:mm")
-=======
-	private Date dataVencimento;
-	@Temporal(TemporalType.DATE)
->>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 	private Date dataPagamento;
 	/**
 	 * 

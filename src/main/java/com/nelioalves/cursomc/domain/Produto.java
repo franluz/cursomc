@@ -36,7 +36,6 @@ public class Produto implements Serializable{
 	)
 	@JsonBackReference
 	private List<Categoria> categorias = new ArrayList<Categoria>();
-<<<<<<< HEAD
 	@OneToMany(mappedBy="id.produto")
 	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
 
@@ -55,9 +54,7 @@ public class Produto implements Serializable{
 	public void setItens(Set<ItemPedido> itens) {
 		this.itens = itens;
 	}
-=======
-	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
->>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+ 
 	
 	public Produto() {
 		super();

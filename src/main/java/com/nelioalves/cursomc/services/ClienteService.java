@@ -13,11 +13,7 @@ import javassist.tools.rmi.ObjectNotFoundException;
 @Service
 public class ClienteService {
 	@Autowired
-<<<<<<< HEAD
 	private ClienteRepository clienteRepository;
-=======
-	ClienteRepository clienteRepository;
->>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 	
 	public Cliente buscar(Integer id) throws ObjectNotFoundException {
 		Optional<Cliente> obj= clienteRepository.findById(id);
