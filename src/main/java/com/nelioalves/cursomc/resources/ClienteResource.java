@@ -17,7 +17,11 @@ import javassist.tools.rmi.ObjectNotFoundException;
 public class ClienteResource {
 
 	@Autowired
+<<<<<<< HEAD
 	private ClienteService clienteService;
+=======
+	ClienteService clienteService;
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) throws ObjectNotFoundException {

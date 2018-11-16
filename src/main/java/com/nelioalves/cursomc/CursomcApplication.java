@@ -13,7 +13,10 @@ import com.nelioalves.cursomc.domain.Cidade;
 import com.nelioalves.cursomc.domain.Cliente;
 import com.nelioalves.cursomc.domain.Endereco;
 import com.nelioalves.cursomc.domain.Estado;
+<<<<<<< HEAD
 import com.nelioalves.cursomc.domain.ItemPedido;
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 import com.nelioalves.cursomc.domain.Pagamento;
 import com.nelioalves.cursomc.domain.PagamentoComBoleto;
 import com.nelioalves.cursomc.domain.PagamentoComCartao;
@@ -26,7 +29,10 @@ import com.nelioalves.cursomc.repositories.CidadeRepository;
 import com.nelioalves.cursomc.repositories.ClienteRepository;
 import com.nelioalves.cursomc.repositories.EnderecoRepository;
 import com.nelioalves.cursomc.repositories.EstadoRepository;
+<<<<<<< HEAD
 import com.nelioalves.cursomc.repositories.ItemPedidoRepository;
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 import com.nelioalves.cursomc.repositories.PagamentoRepository;
 import com.nelioalves.cursomc.repositories.PedidoRepository;
 import com.nelioalves.cursomc.repositories.ProdutoRepository;
@@ -34,6 +40,7 @@ import com.nelioalves.cursomc.repositories.ProdutoRepository;
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {
 	@Autowired
+<<<<<<< HEAD
 	private CategoriaRepository categoriaRepository;
 	@Autowired
 	private ProdutoRepository produtoRepository;
@@ -51,6 +58,23 @@ public class CursomcApplication implements CommandLineRunner {
 	private PagamentoRepository pagamentoRepository;	
 	@Autowired
 	private ItemPedidoRepository itemPedidoRepository;
+=======
+	CategoriaRepository categoriaRepository;
+	@Autowired
+	ProdutoRepository produtoRepository;
+	@Autowired
+	EstadoRepository estadoRepository;
+	@Autowired
+	CidadeRepository cidadeRepository;
+	@Autowired
+	ClienteRepository clienteRepository;
+	@Autowired
+	EnderecoRepository enderecoRepository;
+	@Autowired
+	PedidoRepository pedidoRepository;
+	@Autowired
+	PagamentoRepository pagamentoRepository;	
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CursomcApplication.class, args);
@@ -93,8 +117,13 @@ public class CursomcApplication implements CommandLineRunner {
 		
 		estadoRepository.saveAll(Arrays.asList(est1,est2));
 		cidadeRepository.saveAll(Arrays.asList(c1,c2,c3));
+<<<<<<< HEAD
 		
 		
+=======
+		
+		
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 		clienteRepository.save(cli1);
 		enderecoRepository.saveAll(Arrays.asList(e1,e2));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:MM");
@@ -110,6 +139,7 @@ public class CursomcApplication implements CommandLineRunner {
 		
 		pedidoRepository.saveAll(Arrays.asList(ped1,ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1,pagto2));
+<<<<<<< HEAD
 		
 		ItemPedido ip1 = new ItemPedido(ped1, p1, 000D, 1, 200.00D);
 		ItemPedido ip2 = new ItemPedido(ped1, p3, 000D, 2, 80.00D);
@@ -122,6 +152,8 @@ public class CursomcApplication implements CommandLineRunner {
 		p3.getItens().addAll(Arrays.asList(ip2));
 		
 		itemPedidoRepository.saveAll(Arrays.asList(ip1,ip2,ip3));
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 	}
 
 }
