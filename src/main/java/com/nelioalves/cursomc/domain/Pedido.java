@@ -13,7 +13,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 public class Pedido implements Serializable {
 
@@ -24,6 +27,7 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+	@JsonFormat(pattern="dd/mm/yyyy HH:mm")
 	private  Date instante;
 	@OneToOne(cascade=CascadeType.ALL,mappedBy="pedido")
 	private Pagamento pagamento;
@@ -33,9 +37,15 @@ public class Pedido implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="endereco_de_entrega_id")
 	private Endereco enderecoDeEntrega;
-	
+	@OneToMany(mappedBy="id.pedido")
 	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
 	
+	public Set<ItemPedido> getItens() {
+		return itens;
+	}
+	public void setItens(Set<ItemPedido> itens) {
+		this.itens = itens;
+	}
 	/**
 	 * 
 	 */
