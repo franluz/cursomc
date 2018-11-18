@@ -10,6 +10,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 @Entity
 public class Endereco implements Serializable {
 
@@ -31,6 +38,13 @@ public class Endereco implements Serializable {
 	private Cliente cliente;
 	@ManyToOne
 	@JoinColumn(name="cidade_id")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	@JsonManagedReference
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	private Cidade cidade;
 	
 	/**

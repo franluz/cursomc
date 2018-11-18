@@ -13,10 +13,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+<<<<<<< HEAD
+=======
+import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+import javax.persistence.OneToOne;
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 @Entity
 public class Pedido implements Serializable {
 
@@ -27,7 +38,14 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+<<<<<<< HEAD
 	@JsonFormat(pattern="dd/mm/yyyy HH:mm")
+=======
+<<<<<<< HEAD
+	@JsonFormat(pattern="dd/mm/yyyy HH:mm")
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	private  Date instante;
 	@OneToOne(cascade=CascadeType.ALL,mappedBy="pedido")
 	private Pagamento pagamento;
@@ -37,6 +55,7 @@ public class Pedido implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="endereco_de_entrega_id")
 	private Endereco enderecoDeEntrega;
+<<<<<<< HEAD
 	@OneToMany(mappedBy="id.pedido")
 	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
 	
@@ -46,6 +65,23 @@ public class Pedido implements Serializable {
 	public void setItens(Set<ItemPedido> itens) {
 		this.itens = itens;
 	}
+=======
+<<<<<<< HEAD
+	@OneToMany(mappedBy="id.pedido")
+	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
+	
+	public Set<ItemPedido> getItens() {
+		return itens;
+	}
+	public void setItens(Set<ItemPedido> itens) {
+		this.itens = itens;
+	}
+=======
+	
+	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
+	
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	/**
 	 * 
 	 */
@@ -75,6 +111,11 @@ public class Pedido implements Serializable {
 		this.cliente = cliente;
 		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
+<<<<<<< HEAD
+	
+	
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
 	public Integer getId() {
 		return id;
 	}

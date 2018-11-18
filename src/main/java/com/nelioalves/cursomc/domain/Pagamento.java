@@ -10,7 +10,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED) 
@@ -26,7 +34,14 @@ public abstract  class Pagamento implements Serializable {
 	@JoinColumn(name="pedido_id",referencedColumnName ="id")
 	@OneToOne
 	@MapsId
+<<<<<<< HEAD
 	@JsonIgnore
+=======
+<<<<<<< HEAD
+	@JsonIgnore
+=======
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	private Pedido pedido;
 	/**
 	 * @param id

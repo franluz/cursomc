@@ -14,6 +14,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+<<<<<<< HEAD
+=======
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 
 @Entity
 public class Produto implements Serializable{
@@ -33,6 +38,10 @@ public class Produto implements Serializable{
 				inverseJoinColumns = @JoinColumn(name = "categoria_id")
 	)
 	private List<Categoria> categorias = new ArrayList<Categoria>();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	@OneToMany(mappedBy="id.produto")
 	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
 
@@ -51,6 +60,12 @@ public class Produto implements Serializable{
 	public void setItens(Set<ItemPedido> itens) {
 		this.itens = itens;
 	}
+<<<<<<< HEAD
+=======
+=======
+	private Set<ItemPedido> itens= new HashSet<ItemPedido>();
+>>>>>>> 00b78b2c4976c96871b2723355aef8302e580cac
+>>>>>>> d539a1a398fda18c56eff1dd7a00d694f39b7035
 	
 	public Produto() {
 		super();
