@@ -30,7 +30,6 @@ import com.nelioalves.cursomc.repositories.ItemPedidoRepository;
 import com.nelioalves.cursomc.repositories.PagamentoRepository;
 import com.nelioalves.cursomc.repositories.PedidoRepository;
 import com.nelioalves.cursomc.repositories.ProdutoRepository;
-
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {
 	@Autowired
@@ -51,8 +50,6 @@ public class CursomcApplication implements CommandLineRunner {
 	private PagamentoRepository pagamentoRepository;	
 	@Autowired
 	private ItemPedidoRepository itemPedidoRepository;
- 
-	
 	public static void main(String[] args) {
 		SpringApplication.run(CursomcApplication.class, args);
 	}
@@ -94,7 +91,6 @@ public class CursomcApplication implements CommandLineRunner {
 		
 		estadoRepository.saveAll(Arrays.asList(est1,est2));
 		cidadeRepository.saveAll(Arrays.asList(c1,c2,c3));
- 
 		clienteRepository.save(cli1);
 		enderecoRepository.saveAll(Arrays.asList(e1,e2));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:MM");

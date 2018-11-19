@@ -46,7 +46,6 @@ public class Pedido implements Serializable {
 	public void setItens(Set<ItemPedido> itens) {
 		this.itens = itens;
 	}
-	
 	/**
 	 * 
 	 */
@@ -76,7 +75,6 @@ public class Pedido implements Serializable {
 		this.cliente = cliente;
 		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
- 
 	public Integer getId() {
 		return id;
 	}

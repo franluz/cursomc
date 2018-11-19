@@ -17,8 +17,8 @@ public class PagamentoComBoleto extends Pagamento  {
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(pattern="dd/mm/yyy HH:mm")
 	private Date dataVencimento;
-	@Temporal(TemporalType.DATE)
 	@JsonFormat(pattern="dd/mm/yyy HH:mm")
+	@Temporal(TemporalType.DATE)
 	private Date dataPagamento;
 	/**
 	 * 
