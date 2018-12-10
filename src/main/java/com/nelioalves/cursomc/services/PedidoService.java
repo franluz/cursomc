@@ -3,6 +3,9 @@ package com.nelioalves.cursomc.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.nelioalves.cursomc.domain.Pedido;
@@ -22,5 +25,11 @@ public class PedidoService {
 		}
 		 Optional<Pedido> ped = pedidoRepository.findById(id);
 		 return ped.orElseThrow(()-> new ObjectNotFoundException("Erro ao achar o pedido"));
+	}
+	
+	public Page<Pedido> findPage(Integer page,Integer linesPerPage,String orderBy,String direction){
+		PageRequest pagRequest = PageRequest.of(page, linesPerPage,Direction.valueOf(direction),orderBy);
+		return pedidoRepository.findAll(pagRequest);
+		
 	}
 }
