@@ -28,7 +28,7 @@ public class ProdutoService {
 		PageRequest pagRequest = PageRequest.of(page, linesPerPage,Direction.valueOf(direction),orderBy);
 		List<Categoria> categorias = new ArrayList<Categoria>();
 		categorias = categoriaRepository.findAllById(ids);
-		return repo.search(nome,categorias,pagRequest);
+		return repo.findDistinctByNomeContainingAndCategoriasIn(nome,categorias,pagRequest);
 	}
 	public Produto insert(Produto produto) {
 		return repo.save(produto);

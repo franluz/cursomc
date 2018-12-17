@@ -18,7 +18,7 @@ import com.nelioalves.cursomc.services.ProdutoService;
 import javassist.tools.rmi.ObjectNotFoundException;
 
 @RestController
-@RequestMapping("./produtos")
+@RequestMapping("/produtos")
 public class ProdutoResource {
 	@Autowired
 	private ProdutoService produtoService;
